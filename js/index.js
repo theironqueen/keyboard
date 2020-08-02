@@ -109,7 +109,7 @@ $(document).ready(function(){
 	});
 	//测试结束操作方法
 	function panel1Finish(){
-		console.log("finish");
+		// console.log("finish");
 		$("#panel1-finish").attr("disabled","disabled");
 		$("#panel1-finish").unbind("click");
 		$("#panel1-start").bind("click",panel1Start);
@@ -142,7 +142,7 @@ $(document).ready(function(){
 	}
 	//测试开始操作方法
 	function panel1Start(){
-		console.log("start");
+		// console.log("start");
 		$("#panel1-start").attr("disabled","disabled");
 		$("#panel1-start").unbind("click");
 		$("#panel1-finish").bind("click",panel1Finish);
@@ -176,7 +176,7 @@ $(document).ready(function(){
                     	totalData.push(singleData)
                     	localStorage.setItem("historyData",JSON.stringify(totalData));
 						
-						console.log(localStorage.getItem('historyData'));
+						// console.log(localStorage.getItem('historyData'));
 						// 更新历史记录
 						$("#historyChart1").html("");
 						createPanel1Chart(getPanel1Data());
@@ -257,7 +257,7 @@ $(document).ready(function(){
 			tempData[0].push([0,0]);
 			tempData[1].push([0,0]);
 		}
-		console.log(tempData);
+		// console.log(tempData);
 		return tempData;
 	}
 	//创建图一图表
@@ -365,7 +365,7 @@ $(document).ready(function(){
 	});
 	//测试结束操作方法
 	function panel2Finish(){
-		console.log("finish");
+		// console.log("finish");
 		//去除finish的事件绑定，以及使自身失效
 		$("#panel2-finish").attr("disabled","disabled");
 		$("#panel2-finish").unbind("click");
@@ -402,7 +402,7 @@ $(document).ready(function(){
 	}
 	//测试开始操作方法
 	function panel2Start(){
-		console.log("start");
+		// console.log("start");
 		//去除start的事件绑定，以及使自身失效
 		$("#panel2-start").attr("disabled","disabled");
 		$("#panel2-start").unbind("click");
@@ -415,7 +415,7 @@ $(document).ready(function(){
 		//获取类型,练习类型和练习模式
 		var tempType = $("input[name='panel2Type']:checked").val();
 		var tempModal = $("input[name='panel2Modal']:checked").val();
-		console.log(tempType+"  ****  "+tempModal);
+		// console.log(tempType+"  ****  "+tempModal);
 		panel2Data.type = tempType;
 		panel2Data.modal = tempModal;
 		//确定输入目标
@@ -556,7 +556,7 @@ $(document).ready(function(){
 		for (var item in panel2TotalData){
 			var tempdata = panel2TotalData[item];
 			var classify = parseInt(tempdata.modal)*3+parseInt(tempdata.type);
-			console.log(classify);
+			// console.log(classify);
 			var data = {};
 			data.right = tempdata.right;
 			data.time = tempdata.time;
