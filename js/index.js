@@ -859,7 +859,7 @@ $(document).ready(function(){
 		var $panel3Table = $("#panel3-data-table tbody");
 		$panel3Table.html("");
 		$panel3Table.append(dataHtml);
-		console.log(panel3TotalData);
+		// console.log(panel3TotalData);
 	}
 	function panel3Sort(a,b){
 		if (a.no > b.no){
